@@ -51,7 +51,12 @@ input {
 	position: relative;
 	padding-top: 1.5rem;
 	margin-top: 1.25rem;
-	word-wrap: break-word;
+}
+
+textarea {
+	resize: none;
+	min-height: 25px;
+	max-height: 500px;
 }
 
 .input-label {
@@ -59,7 +64,6 @@ input {
 	position: absolute;
 	top: 1.5rem;
 	transition: .5s ease;
-	
 }
 
 .input-field {

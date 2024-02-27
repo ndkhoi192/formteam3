@@ -21,7 +21,7 @@
                     <label class="input-label">MSSV</label>
                 </div>
                 <div class="input">
-                    <input type="text" class="input-field" id="post" required/>
+                    <textarea oninput="auto_grow(this)" type="text" class="input-field" id="post" required></textarea>
                     <label class="input-label">Viết bài ở đây...</label>
                 </div>
                 <div class="input">
@@ -52,6 +52,10 @@
             event.preventDefault();
             window.location.href = "trangphu/backhome.html";
         });
+        function auto_grow(element) {
+        element.style.height = "5px";
+        element.style.height = (element.scrollHeight) + "px";
+        }
     </script>
 </body>
 </html>
