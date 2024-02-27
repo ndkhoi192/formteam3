@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>FORM ĐIỀN</title>
+</head>
+<body>
+    <div class="container-xl container-sm ">
+        <div class="card">
+            <div class="card-image">	
+            </div>
+            <form class="card-form" id="post-form">
+                <div class="input">
+                    <input type="text" class="input-field" id="Name" required/>
+                    <label class="input-label">Tên/Ẩn danh</label>
+                </div>
+                <div class="input">
+                    <input type="text" class="input-field" id="mssv" required/>
+                    <label class="input-label">MSSV</label>
+                </div>
+                <div class="input">
+                    <input type="text" class="input-field" id="post" required/>
+                    <label class="input-label">Viết bài ở đây...</label>
+                </div>
+                <div class="input">
+                    <input type="file" class="input-field" id="imageup" required/>
+                    <label class="input-label">Upload</label>
+                </div>
+                <div class="action">
+                    <button type="submit" class="action-button" id="clickbtn">Đăng bài</button>
+                </div>
+            </form>
+            <div class="card-info mb-0 p-3">Copyright © 2024 Team 3 CTV JS . All Rights Reserved.</div>
+            
+        </div>
+    </div>
+    <script>
+        document.getElementById('post-form').addEventListener('submit', function (event) {
+            event.preventDefault();
+            var nameValue = document.getElementById('Name').value;
+            var mssvValue = document.getElementById('mssv').value;
+            var postValue = document.getElementById('post').value;
+            var imageValue = document.getElementById('imageup').value;
+            console.log("Tên: ", nameValue);
+            console.log("MSSV:", mssvValue);
+            console.log("Bài đăng:", postValue);
+            console.log("Ảnh:", imageValue);
+        });
+        document.getElementById('clickbtn').addEventListener('click', function(event) {
+            event.preventDefault();
+            window.location.href = "trangphu/backhome.html";
+        });
+    </script>
+</body>
+</html>
+
